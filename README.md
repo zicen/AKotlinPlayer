@@ -2,11 +2,11 @@
 
 ##效果图
 ###1、整体效果图 
-    ![](https://github.com/zicen/AKotlinPlayer/blob/master/image/GIF2.gif)
+    ![](https://github.com/zicen/AKotlinPlayer/blob/master/image/%E6%95%B4%E4%BD%93%E6%95%88%E6%9E%9C%E5%9B%BE.gif)
 ###2、视频播放效果图
-        
+    ![](https://github.com/zicen/AKotlinPlayer/blob/master/image/%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E6%95%88%E6%9E%9C%E5%9B%BE.gif)
 ###3、音乐播放效果图
-    
+    ![](https://github.com/zicen/AKotlinPlayer/blob/master/image/%E6%9C%AC%E5%9C%B0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE.gif)
 
 ##使用的技術点
     1、6.0权限机制，自定义弹窗
