@@ -279,7 +279,7 @@ class AudioService : Service() {
             val bitmap = BitmapFactory.decodeResource(resources, R.mipmap.ic_launcher)
             val notification = NotificationCompat.Builder(this@AudioService)
                     .setTicker("正在播放歌曲${list?.get(position)?.display_name}")
-                    .setSmallIcon(R.mipmap.ic_launcher)
+                    .setSmallIcon(R.mipmap.icon)
 //                .setLargeIcon(bitmap)
 //                .setContentTitle("北京")//通知标题
 //                .setContentText("汪峰")//通知内容
