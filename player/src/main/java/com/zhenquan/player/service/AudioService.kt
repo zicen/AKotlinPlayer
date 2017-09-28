@@ -276,7 +276,7 @@ class AudioService : Service() {
          *
          */
         private fun getNotification(): Notification? {
-            val bitmap = BitmapFactory.decodeResource(resources, R.mipmap.ic_launcher)
+            val bitmap = BitmapFactory.decodeResource(resources, R.mipmap.icon)
             val notification = NotificationCompat.Builder(this@AudioService)
                     .setTicker("正在播放歌曲${list?.get(position)?.display_name}")
                     .setSmallIcon(R.mipmap.icon)

@@ -16,6 +16,7 @@ import com.zhenquan.player.view.MvListView
 import com.zhenquan.player.widget.MvItemView
 import kotlinx.android.synthetic.main.fragment_list.*
 import org.jetbrains.anko.support.v4.startActivity
+import org.jetbrains.anko.support.v4.toast
 
 
 /**
@@ -47,9 +48,14 @@ class MvPagerFragment: BaseListFragment<MvPagerBean, VideosBean, MvItemView>(), 
         super.initListener()
         //设置条目点击事件监听函数
         adapter.setMyListener{
-            val videoPlayBean = VideoPlayBean(it.id, it.title, it.url)
-            //跳转到视频播放界面
-            startActivity<JiecaoVideoPlayerActivity>("item" to videoPlayBean)
+            if (it?.url != null) {
+                val videoPlayBean = VideoPlayBean(it.id, it.title, it.url)
+                //跳转到视频播放界面
+                startActivity<JiecaoVideoPlayerActivity>("item" to videoPlayBean)
+            }else{
+                toast("获取视频url为空！")
+            }
+
         }
     }
 }
