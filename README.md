@@ -22,4 +22,7 @@
     - MediaPlayer+Service+Notification歌曲播放功能实现
     - jiecaovideoplayer实现视频播放
     - AsyncQueryHandler查询本地的歌曲文件
-   
+    
+勾搭一下
+----------
+![](https://github.com/zicen/EncryptionStudy/blob/master/image/erweima.png)
