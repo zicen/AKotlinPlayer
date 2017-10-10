@@ -23,15 +23,15 @@ abstract class BaseListFragment<RESPONSE,ITEMBEAN,ITEMVIEW:View> : BaseFragment(
 
     override fun loadSuccess(response:RESPONSE?) {
         //隐藏刷新控件
-        refreshLayout.isRefreshing = false
+        refreshLayout?.isRefreshing = false
         //刷新列表
-        adapter.updateList(getList(response))
+        adapter?.updateList(getList(response))
     }
 
 
 
     override fun loadMore(response: RESPONSE?) {
-        adapter.loadMore(getList(response))
+        adapter?.loadMore(getList(response))
     }
 
     //适配
@@ -48,19 +48,19 @@ abstract class BaseListFragment<RESPONSE,ITEMBEAN,ITEMVIEW:View> : BaseFragment(
 
     override fun initListener() {
         //初始化recycleview
-        recycleView.layoutManager =getLayoutManager()
+        recycleView?.layoutManager =getLayoutManager()
 
-        recycleView.adapter = adapter
+        recycleView?.adapter = adapter
 
         //初始化刷新控件
-        refreshLayout.setColorSchemeColors(Color.RED, Color.YELLOW, Color.GREEN)
+        refreshLayout?.setColorSchemeColors(Color.RED, Color.YELLOW, Color.GREEN)
         //刷新监听
-        refreshLayout.setOnRefreshListener {
+        refreshLayout?.setOnRefreshListener {
             //刷新监听
-            presenter.loadDatas()
+            presenter?.loadDatas()
         }
         //监听列表滑动
-        recycleView.addOnScrollListener(object : RecyclerView.OnScrollListener(){
+        recycleView?.addOnScrollListener(object : RecyclerView.OnScrollListener(){
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 if(newState== RecyclerView.SCROLL_STATE_IDLE){
                     //是否最后一条已经显示
@@ -70,7 +70,7 @@ abstract class BaseListFragment<RESPONSE,ITEMBEAN,ITEMVIEW:View> : BaseFragment(
                         val lastPosition = manager.findLastVisibleItemPosition()
                         if(lastPosition==adapter.itemCount-1){
                             //最后一条已经显示了
-                            presenter.loadMore(adapter.itemCount-1)
+                            presenter?.loadMore(adapter.itemCount-1)
                         }
                     }
                 }
@@ -81,7 +81,7 @@ abstract class BaseListFragment<RESPONSE,ITEMBEAN,ITEMVIEW:View> : BaseFragment(
 
     override fun initData() {
         //初始化数据
-        presenter.loadDatas()
+        presenter?.loadDatas()
     }
     /**
      * 获取适配器adapter

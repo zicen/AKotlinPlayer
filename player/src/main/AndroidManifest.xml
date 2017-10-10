@@ -9,6 +9,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/icon"
+        android:name="com.zhenquan.App"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/icon"
         android:supportsRtl="true"

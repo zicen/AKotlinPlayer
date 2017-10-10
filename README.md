@@ -22,4 +22,6 @@
     - MediaPlayer+Service+Notification歌曲播放功能实现
     - jiecaovideoplayer实现视频播放
     - AsyncQueryHandler查询本地的歌曲文件
+    - 夜间模式切换
+    - 。。。。。。
    

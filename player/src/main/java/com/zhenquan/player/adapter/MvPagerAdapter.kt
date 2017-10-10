@@ -13,7 +13,7 @@ import com.zhenquan.player.ui.fragment.MvPagerFragment
  * ClassName:MvPagerAdapter
  * Description:
  */
-class MvPagerAdapter(val context:Context,val list:List<MvAreaBean>?,fm: FragmentManager?) : FragmentPagerAdapter(fm) {
+class MvPagerAdapter(val context:Context?,val list:List<MvAreaBean>?,fm: FragmentManager?) : FragmentPagerAdapter(fm) {
 
     override fun getItem(position: Int): Fragment {
         //第一种数据传递方式
