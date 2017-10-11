@@ -15,7 +15,7 @@ class App  : Application() {
     }
 
     /**
-     *
+     *初始化夜间模式
      */
      fun setNightMode(){
         val nightMode = defaultSharedPreferences.getBoolean("night", false)
